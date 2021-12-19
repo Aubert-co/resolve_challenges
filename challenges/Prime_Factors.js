@@ -10,7 +10,17 @@ Examples
 12 ==>  [2, 2, 3]*/
 
 const Prime_Factors = (n)=>{
-    for(let i = 0 ;i<n;i++){
-        
+    const array = []
+    
+    for(let i = 1 ;i <n+1;i++){
+        if(n%i === 0  && i !== 1){
+            array.push(i)
+            n = n/i
+            i =1
+        }
     }
+    return array
 }
+Prime_Factors(36)
+
+//done
