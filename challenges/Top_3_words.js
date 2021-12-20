@@ -4,6 +4,9 @@ function topThreeWords(text) {
     const a = text.split(' ')
     const v = []
     const m = a.reduce((count,val)=>{
+        if(val === ''){
+            return undefined
+        }
         if(count[val]){
             count[val]++
             return count
@@ -36,3 +39,6 @@ function topThreeWords(text) {
    
 }
 console.log(topThreeWords("  //wont won't won't"))
+//const ss =  ", e m & % $ . \ A won't"
+
+//const a = ss.replace(/[$%¨&*()/!"`{}?<>., ]/gi," ")
