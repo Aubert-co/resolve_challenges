@@ -1,15 +1,14 @@
 const string = "b b g g g g g g g m m m m e e e e b c c c v a a a a"
-function topThreeWords(text) {  
+
+const returnValuesInObject = (text)=>{
     const ma = text.replace(/[$%¨&*()/!"`{}?<>.,;-=+@#\/ ]/gi," ")
     const a = ma.split(' ')
-    const v = []
+ 
     const m = a.reduce((count,val)=>{
-        
         if(count[val]){
             count[val]++
             return count
         }
-       
         count[val] = 1
         return count
     },{})
@@ -23,7 +22,11 @@ function topThreeWords(text) {
         const obj = {keys:val,values:values[ind]}
         array.push(obj)
     })
-    
+    return array
+}
+function topThreeWords(text) {  
+
+    const array = returnValuesInObject(text)
     const sortHightvalues = array.sort((a,b)=>{
         if(a.values > b.values){
             return -1
@@ -33,7 +36,7 @@ function topThreeWords(text) {
         }
         return 0
     })
-    console.log(sortHightvalues)
+    
    return sortHightvalues.splice(0,3)
    .map((val)=>{
        return val.keys
