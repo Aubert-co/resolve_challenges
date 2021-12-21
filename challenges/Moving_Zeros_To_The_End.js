@@ -6,12 +6,5 @@ var moveZeros = function (a) {
        if(b>0){
            return !b
        }
-       if(typeof v === 'string' ){
-         
-           return v= a.sort()
-       }
-       return 
-       })  
-  
-      
-  }
+    })  
+}
