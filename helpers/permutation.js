@@ -1,18 +1,17 @@
 let v = []
-const addItem = (values)=>v.push(values)
+const addItem = new Map()
 const func = (arr,k)=>{
     var len = arr.length
-   
+    
     if(k===len){
- 
        
        return 
     }
     for(let i=k;i<len;i++){
-     
+        
         arr = TrocaCaractere(arr,k,i)
         func(arr,k+1)
-        addItem(arr)
+        console.log(arr)
     }
  
 }
@@ -24,6 +23,32 @@ function TrocaCaractere(str, p1, p2) //ela recebe três parâmetros
 
     return str;
 }
-func([1,2,3,4],0)
-
+func([4,1,4],0)
+/**
+ * function permutator(inputArr) {
+    var results = [];
+    const ma = new Map()
+   const string = inputArr.split('')
+    function permute(arr, memo) {
+      var cur, memo = memo || [];
+  
+      for (var i = 0; i < arr.length; i++) {
+        cur = arr.splice(i, 1);
+        if (arr.length === 0) {
+          results.push(memo.concat(cur).join(''));
+        }
+        permute(arr.slice(), memo.concat(cur));
+        arr.splice(i, 0, cur[0]);
+      }
+  
+      return results
+    }
+  
+    permute(string)
+    .map((val)=>{
+        ma.set(val)
+    })
+    return [...ma.keys()]
+  }
+ */
 console.log(v)
