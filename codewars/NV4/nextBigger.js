@@ -48,7 +48,7 @@ console.log(permutator('trebua'))*/
 fns([2,0,1,7])*/
 const ab  = [5,1,3]
 
-const func = (b)=>{
+/*const func = (b)=>{
   const a = b.toString().split('')
   const array = [...a].sort()
   var maior = array[array.length-1]
@@ -63,4 +63,31 @@ const func = (b)=>{
   a[index] = ant
   return Number(a.join(''))
 }
-console.log(func(8277))
+console.log(func(8277))*/
+
+const bb =(bs)=>{
+  const a =bs.toString().split('')
+  const num = Number(bs)
+  let arr =num
+  const values =[]
+  for(let i=1;i<a.length;i++){
+    const b = [...a]
+
+    const tmp =b[i-1]
+    b[i-1] =b[i]
+    b[i] =tmp
+
+    const num2 =Number(b.join(''))
+   
+    if(num2 > num){
+      arr = num2
+      values.push([num2-num,num2])
+    }
+  }
+
+  const sorts=values.sort()
+  console.log(values)
+  if(num === arr)return -1
+  return sorts[0][1]
+}
+console.log(bb( 8472911))
