@@ -1,5 +1,9 @@
 const a = [1,2,2]
 
-const find = a.lastIndexOf(1)
+ Array.prototype.Tst = (val,cb)=>{
+    return cb(val*val)
+}
 
-console.log(find)
+console.log(a.Tst(2,(value)=>{
+    return value
+}))
