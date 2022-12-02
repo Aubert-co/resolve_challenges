@@ -1,3 +1,4 @@
+const v = []
 const bb =(bs)=>{
     const a =bs.toString().split('')
  
@@ -8,8 +9,9 @@ const bb =(bs)=>{
       b[i-1] =b[i]
       b[i] =tmp
   
-      console.log(b)
+      v.push(b)
     }
 }
-  console.log(bb(431))
+bb('bc')
+console.log(v)
   
