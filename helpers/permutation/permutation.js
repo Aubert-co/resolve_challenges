@@ -1,5 +1,5 @@
 let v = []
-const addItem = new Map()
+
 const func = (arr,k)=>{
     var len = arr.length
     
