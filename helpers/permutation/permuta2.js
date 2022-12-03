@@ -10,8 +10,18 @@ const bb =(bs)=>{
       b[i] =tmp
   
       v.push(b)
+      console.log('here')
     }
 }
-bb('bc')
-console.log(v)
-  
+//bb('bc',2)
+
+const l = []
+const fun = ()=>{console.count('here')}
+const test = (array,k)=>{
+
+  for(let i =k;i<array.length;i++){
+    fun()
+    
+  }
+}
+test([1,2],0)
