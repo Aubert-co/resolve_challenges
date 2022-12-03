@@ -7,7 +7,7 @@ const func = (arr,find)=>{
 }
 
 
-const v = Array.prototype = ()=>{
-    return 'h1'
+ Array.prototype.v = (value)=>{
+    
 }
-arry.v()
+
