@@ -11,7 +11,7 @@ const func = (arr,k)=>{
         
         arr = TrocaCaractere(arr,k,i)
         func(arr,k+1)
-        console.log(arr)
+        v.push(arr)
     }
  
 }
@@ -23,7 +23,7 @@ function TrocaCaractere(str, p1, p2) //ela recebe três parâmetros
 
     return str;
 }
-func([4,1,4],0)
+func([4,1,4,2],0)
 /**
  * function permutator(inputArr) {
     var results = [];
@@ -51,4 +51,4 @@ func([4,1,4],0)
     return [...ma.keys()]
   }
  */
-console.log(v)
+console.log(v.length)
