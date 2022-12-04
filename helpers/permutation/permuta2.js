@@ -10,18 +10,30 @@ const bb =(bs)=>{
       b[i] =tmp
   
       v.push(b)
-      console.log('here')
+      console.log(v)
     }
 }
-//bb('bc',2)
 
-const l = []
-const fun = ()=>{console.count('here')}
-const test = (array,k)=>{
-
-  for(let i =k;i<array.length;i++){
-    fun()
-    
+const ddd= (a,k)=>{
+  for(let i=1;i<a.length;i++){
+   
+    const tmp= a[k]
+    a[i] = a[i+1]
+    a[i+1] = tmp
+    return a    
   }
 }
-test([1,2],0)
+const test = (value)=>{
+
+  const permu =(a,k)=>{
+    for(let i =0;i<6;i++){
+        k = i
+        if(k >= a.length)k=0
+        a= ddd(a,k)
+        console.log(a[k])
+    }
+  }
+  permu([1,2,3])
+}
+test([123])
+
