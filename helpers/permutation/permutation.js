@@ -1,4 +1,4 @@
-let v = []
+/*let v = []
 
 const func = (arr,k)=>{
     var len = arr.length
@@ -23,9 +23,8 @@ function TrocaCaractere(str, p1, p2) //ela recebe três parâmetros
 
     return str;
 }
-func([4,1,4,2],0)
-/**
- * function permutator(inputArr) {
+func([4,1,4,2],0)*/
+function permutator(inputArr) {
     var results = [];
     const ma = new Map()
    const string = inputArr.split('')
@@ -33,22 +32,23 @@ func([4,1,4,2],0)
       var cur, memo = memo || [];
   
       for (var i = 0; i < arr.length; i++) {
+        console.log(i,arr)
         cur = arr.splice(i, 1);
         if (arr.length === 0) {
           results.push(memo.concat(cur).join(''));
         }
         permute(arr.slice(), memo.concat(cur));
         arr.splice(i, 0, cur[0]);
+     
       }
   
       return results
     }
   
-    permute(string)
-    .map((val)=>{
+ return   permute(string)
+   /* .map((val)=>{
         ma.set(val)
     })
-    return [...ma.keys()]
+    return [...ma.keys()]*/
   }
- */
-console.log(v.length)
+console.log(permutator('123'))
