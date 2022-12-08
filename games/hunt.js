@@ -3,7 +3,8 @@ const datas = [
     {day:'3/12',gasto:5510,baus:24,sparks:3,ganho:8685},
     {day:'4/12',sparks:1,baus:27,gasto:5855,ganho:(6660)},
     {day:'5/12',baus:30,ganho:230+11960,sparks:2,gasto:5135},
-    {day:'6/12',baus:32,ganho:230+8635,sparks:0,gasto:5975}
+    {day:'6/12',baus:32,ganho:230+8635,sparks:0,gasto:5975},
+    {day:'7/12',baus:22,sparks:2,gasto:4625,send:67,ganho:5380}
 ]
 const investimentos = [
 8000,6510
