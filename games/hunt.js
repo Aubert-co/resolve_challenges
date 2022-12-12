@@ -4,10 +4,15 @@ const datas = [
     {day:'4/12',sparks:1,baus:27,gasto:5855,ganho:(6660)},
     {day:'5/12',baus:30,ganho:230+11960,sparks:2,gasto:5135},
     {day:'6/12',baus:32,ganho:230+8635,sparks:0,gasto:5975},
-    {day:'7/12',baus:22,sparks:2,gasto:4625,send:67,ganho:5380}
+    {day:'7/12',baus:22,sparks:2,gasto:4625,send:67,ganho:5380},
+    {day:'8/12',sparks:1,gasto:5995,baus:28,ganho:265+7810},
+    {day:'9/12',sparks:3,gasto:6175.00,ganho:330+7900,baus:31},
+    {day:'10/12',sparks:4,gasto:6695,ganho:230+15815.00,baus:33},
+    {day:'11/12',sparks:0,gasto:5525.00,ganho:(3*230)+6020,baus:27}
 ]
+
 const investimentos = [
-8000,6510
+8000,6510,11000,11000,7864,6814,10800,7200,7200,6613,8500,10500
 ]
 
 function Values (){
@@ -22,15 +27,21 @@ const generalValue = datas.reduce((vl,tr)=>{
     baus:vl.baus+tr.baus,
     gasto:vl.gasto+tr.gasto,
     profit:(vl.ganho+tr.ganho)-(vl.gasto+tr.gasto),
-    sparks:vl.sparks+tr.sparks,
+    sparks:vl.sparks+(tr.sparks*2)/100,
     totalDays:datas.length
    }
 })
-
+const median = (days)=>{
+    const profit = generalValue.profit/datas.length
+    const sparks = generalValue.sparks/datas.length
+    const em_days_baus  =  `em ${days} dias vc tera um lucro de ${profit*days}`
+    const em_days_sparks = `em ${days} dias vc tera um lucro de ${sparks*days}`
+    return {day_median:profit,dayprofy:em_days_baus,em_days_sparks,sparks_median:sparks}
+}
 return {
     daylyValue,generalValue,
-    fund:generalValue.profit-spendValue
+    fund:generalValue.profit-spendValue,median
 }
 }
-const {daylyValue,generalValue,fund} = Values()
-console.log(fund)
+const {daylyValue,generalValue,fund,median} = Values()
+console.log(median(2))
