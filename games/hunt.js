@@ -8,9 +8,17 @@ const datas = [
     {day:'8/12',sparks:1,gasto:5995,baus:28,ganho:265+7810},
     {day:'9/12',sparks:3,gasto:6175.00,ganho:330+7900,baus:31},
     {day:'10/12',sparks:4,gasto:6695,ganho:230+15815.00,baus:33},
-    {day:'11/12',sparks:0,gasto:5525.00,ganho:(3*230)+6020,baus:27}
+    {day:'11/12',sparks:0,gasto:5525.00,ganho:(3*230)+6020,baus:27},
+    {day:'12/12',baus:(44-27)+(4+7),ganho:(11460-6480)+(460+460+1880),sparks:1,gasto:5645}
 ]
 
+/**
+ * after
+ * Tier: queens,  TotalChests: 27,  TotalUPX: 6480.00,  Spark: 0.02 (~$12.00),  SparkChests: 1,  Profit: 2665.00,  TotalFees: 3815.00,  SparkPerTreasureRatio: 0.04,  SendsPerTreasureRatio: 2.00,  SendsUsed: 54,  AvgSendFee: 35.46
+ */
+/**before
+ * Tier: queens,  TotalChests: 44,  TotalUPX: 11460.00,  Spark: 0.02 (~$12.00),  SparkChests: 1,  Profit: 7645.00,  TotalFees: 3815.00,  SparkPerTreasureRatio: 0.02,  SendsPerTreasureRatio: 1.23,  SendsUsed: 54,  AvgSendFee: 35.46
+ */
 const investimentos = [
 8000,6510,11000,11000,7864,6814,10800,7200,7200,6613,8500,10500
 ]
@@ -44,4 +52,4 @@ return {
 }
 }
 const {daylyValue,generalValue,fund,median} = Values()
-console.log(median(2))
+console.log(daylyValue)
