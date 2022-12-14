@@ -9,7 +9,8 @@ const datas = [
     {day:'9/12',sparks:3,gasto:6175.00,ganho:330+7900,baus:31},
     {day:'10/12',sparks:4,gasto:6695,ganho:230+15815.00,baus:33},
     {day:'11/12',sparks:0,gasto:5525.00,ganho:(3*230)+6020,baus:27},
-    {day:'12/12',baus:(44-27)+(4+7),ganho:(11460-6480)+(460+460+1880),sparks:1,gasto:5645}
+    {day:'12/12',baus:(44-27)+(4+7),ganho:(11460-6480)+(460+460+1880),sparks:1,gasto:5645},
+    {day:'13/12',baus:20,sparks:2,ganho:4880,gasto:3000}
 ]
 
 /**
@@ -52,4 +53,4 @@ return {
 }
 }
 const {daylyValue,generalValue,fund,median} = Values()
-console.log(daylyValue)
+console.log(median(10))
