@@ -16,13 +16,14 @@ const datas = [
     {day:'16/12',baus:35,sparks:1,gasto:6030,ganho:10980},
     {day:'17/12',baus:41,ganho:13600,gasto:7145,sparks:2},
     {day:'18/12',baus:25,ganho:19075,gasto:6025,sparks:1},
-    {day:'19/12',baus:44,ganho:16895,gasto:7165,sparks:2}
+    {day:'19/12',baus:44,ganho:16895,gasto:7165,sparks:2},
+    {day:'20/12',baus:35,sparks:2,ganho:38925,gasto:6380}
 ]
 /**
- * Tier: queens,  TotalChests: 46,  TotalUPX: 16895.00,  Spark: 0.04 (~$24.00),  SparkChests: 2,  Profit: 9730.00,  TotalFees: 7165.00,  SparkPerTreasureRatio: 0.04,  SendsPerTreasureRatio: 2.37,  SendsUsed: 109,  AvgSendFee: 33.90
+ * Tier: queens,  TotalChests: 37,  TotalUPX: 38925.00,  Spark: 0.04 (~$24.00),  SparkChests: 2,  Profit: 32545.00,  TotalFees: 6380.00,  SparkPerTreasureRatio: 0.05,  SendsPerTreasureRatio: 2.22,  SendsUsed: 82,  AvgSendFee: 34.63
  */
 const investimentos = [
-8000,6510,11000,11000,7864,6814,10800,7200,7200,6613,8500,10500,7000,7000,47000,40000
+8000,6510,11000,11000,7864,6814,10800,7200,7200,6613,8500,10500,7000,7000,47000,40000,50000
 ]
 
 function Values (){
@@ -58,4 +59,6 @@ return {
 }
 }
 const {daylyValue,generalValue,fund,median,lastDays} = Values()
-console.log(daylyValue)
+
+const sparks= datas.filter(({sparks})=>sparks>2)
+console.log(sparks)
