@@ -18,7 +18,8 @@ const datas = [
     {day:'18/12',baus:25,ganho:19075,gasto:6025,sparks:1},
     {day:'19/12',baus:44,ganho:16895,gasto:7165,sparks:2},
     {day:'20/12',baus:35,sparks:2,ganho:38925,gasto:6380},
-    {day:'21/12',baus:9+19,ganho:3510+5640,gasto:5635,sparks:0}
+    {day:'21/12',baus:9+19,ganho:3510+5640,gasto:5635,sparks:0},
+    {day:'22/12',baus:38-9,ganho:13300.00-4150,gasto:6025,sparks:2}
 ]
 const datasProfit = datas.map((val)=>{
     const {gasto,ganho} = val
@@ -65,4 +66,4 @@ return {
 const {daylyValue,generalValue,fund,median,lastDays} = Values()
 
 const sparks= datasProfit.filter(({profit})=>profit>5000)
-console.log(sparks)
+console.log(daylyValue)
