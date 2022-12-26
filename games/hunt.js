@@ -21,7 +21,8 @@ const datas = [
     {day:'21/12',baus:9+19,ganho:3510+5640,gasto:5635,sparks:0},
     {day:'22/12',baus:38-9,ganho:13300.00-4150,gasto:6025,sparks:2},
     {day:'23/12',baus:20,ganho:4900,gasto:4825,sparks:1},
-    {day:'24/12',baus:37,ganho:11930,sparks:2,gasto:6885}
+    {day:'24/12',baus:37,ganho:11930,sparks:2,gasto:6885},
+    {day:'25/12',baus:37,sparks:2,ganho:9960,gasto:6680}
 ]
 
 /*const datasProfit = datas.map((val)=>{
@@ -58,8 +59,23 @@ const median = (days)=>{
     return {day_median:profit,dayprofy:em_days_baus,em_days_sparks,sparks_median:sparks}
 }
 const lastDays= (day)=>{
-    const split = datas.splice(datas.length-1,day)
-    return split.reduce((vl,tr)=>vl.ganho+tr.ganho)
+    const split = datas.splice((datas.length-day)-1,day)
+   
+    const converted = split.reduce((vl,tr)=>{
+        return {
+            days:`nos ultimos ${day} dias voce teve o retorno de `,
+            baus:vl.baus+tr.baus,
+            sparks:vl.sparks+tr.sparks,
+            ganho:vl.ganho+tr.ganho,
+            gasto:vl.gasto+tr.gasto
+        }
+    })
+    return {
+        datas_cont:split.length,
+        ...converted,
+        sparks:converted.sparks*0.02,
+        profit:converted.ganho - converted.gasto
+    }
 }
 return {
     daylyValue,generalValue,lastDays,
@@ -69,4 +85,4 @@ return {
 const {daylyValue,generalValue,fund,median,lastDays} = Values()
 
 //const sparks= datasProfit.filter(({profit})=>profit>5000)
-console.log(daylyValue)
+console.log(lastDays(23))
