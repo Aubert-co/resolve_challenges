@@ -22,8 +22,10 @@ const datas = [
     {day:'22/12',baus:38-9,ganho:13300.00-4150,gasto:6025,sparks:2},
     {day:'23/12',baus:20,ganho:4900,gasto:4825,sparks:1},
     {day:'24/12',baus:37,ganho:11930,sparks:2,gasto:6885},
-    {day:'25/12',baus:37,sparks:2,ganho:9960,gasto:6680}
+    {day:'25/12',baus:37,sparks:2,ganho:9960,gasto:6680},
+    {day:'26/12',baus:25,ganho:7970,sparks:2,gasto:4875}
 ]
+
 
 /*const datasProfit = datas.map((val)=>{
     const {gasto,ganho} = val
