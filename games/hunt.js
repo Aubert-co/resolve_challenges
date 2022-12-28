@@ -23,9 +23,12 @@ const datas = [
     {day:'23/12',baus:20,ganho:4900,gasto:4825,sparks:1},
     {day:'24/12',baus:37,ganho:11930,sparks:2,gasto:6885},
     {day:'25/12',baus:37,sparks:2,ganho:9960,gasto:6680},
-    {day:'26/12',baus:25,ganho:7970,sparks:2,gasto:4875}
+    {day:'26/12',baus:25,ganho:7970,sparks:2,gasto:4875},
+    {day:'27/12',baus:34,ganho:10970,gasto:5435,sparks:2}
 ]
-
+/**
+ * Tier: queens,  TotalChests: 34,  TotalUPX: 10970.00,  Spark: 0.04 (~$24.00),  SparkChests: 2,  Profit: 5535.00,  TotalFees: 5435.00,  SparkPerTreasureRatio: 0.06,  SendsPerTreasureRatio: 2.38,  SendsUsed: 81,  AvgSendFee: 35.00
+ */
 
 /*const datasProfit = datas.map((val)=>{
     const {gasto,ganho} = val
