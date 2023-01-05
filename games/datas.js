@@ -29,5 +29,9 @@ module.exports   = [
     {day:'29/12',baus:30,ganho:9165,sparks:2,gasto:5575},
     {day:'30/12',baus:45,ganho:14865,sparks:0,gasto:7100},
     {day:'31/12',baus:37,ganho:17825,sparks:4,gasto:6745},
-    {day:'1/1/23',baus:39,ganho:9345,sparks:2,gasto:6605}
+    {day:'1/1/23',baus:39,ganho:9345,sparks:2,gasto:6605},
+    {day:'2/1/23',baus:42,sparks:3,ganho:12645,gasto:7110},
+    {day:'3/1/23',baus:46,sparks:2,ganho:11695,gasto:7810},
+    {day:'4/1/23',baus:30,sparks:6,ganho:9361,gasto:5605}
 ]
+
