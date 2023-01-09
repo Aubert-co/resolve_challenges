@@ -35,8 +35,9 @@ module.exports   = [
     {day:'4/1/23',baus:30,sparks:6,ganho:9361,gasto:5605},
     {day:'5/1/23',baus:44,sparks:1,ganho:12590,gasto:5895},
     {day:'6/1/23',baus:32,ganho:10565,sparks:1,gasto:5755},
-    {day:'7/1/23',baus:47,sparks:5,ganho:12027,gasto:7300}
+    {day:'7/1/23',baus:47,sparks:5,ganho:12027,gasto:7300},
+    {day:'8/1/23',baus:31,sparks:1,ganho:11043,gasto:5985}
 ]
 /*
-ier: queens,  TotalChests: 47,  TotalUPX: 12027.00,  Spark: 0.10 (~$60.00),  SparkChests: 5,  Profit: 4727.00,  TotalFees: 7300.00,  SparkPerTreasureRatio: 0.11,  SendsPerTreasureRatio: 1.81,  SendsUsed: 85,  AvgSendFee: 34.12
+Tier: queens,  TotalChests: 31,  TotalUPX: 11043.00,  Spark: 0.02 (~$12.00),  SparkChests: 1,  Profit: 5058.00,  TotalFees: 5985.00,  SparkPerTreasureRatio: 0.03,  SendsPerTreasureRatio: 2.71,  SendsUsed: 84,  AvgSendFee: 34.35
 */
