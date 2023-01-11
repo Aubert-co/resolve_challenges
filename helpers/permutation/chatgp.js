@@ -53,4 +53,42 @@ function permute(arr) {
   
   let parser = new DocumentParser();
   parser.parse("You can try, but you'll never catch me.\nBazinga!")
-console.log(parser.lineCount)
+/**
+ * 
+ * function permute(elements, numPlaces) {
+  // Caso base: se numPlaces for 1, retornamos os elementos
+  if (numPlaces === 1) return elements;
+
+  // Inicializamos um array de permutações vazio
+  let permutations = [];
+
+  // Iteramos sobre cada elemento do array de elementos
+  for (let i = 0; i < elements.length; i++) {
+    // Pegamos o elemento atual
+    let currentElement = elements[i];
+
+    // Criamos um novo array de elementos com todos os elementos, exceto o atual
+    let remainingElements = elements.slice(0, i).concat(elements.slice(i + 1));
+
+    // Geramos as permutações com o elemento atual e os demais elementos
+    let subPermutations = permute(remainingElements, numPlaces - 1);
+
+    // Adicionamos cada permutação à lista de permutações, desde que não tenha elementos repetidos
+    for (let j = 0; j < subPermutations.length; j++) {
+      let permutation = [currentElement].concat(subPermutations[j]);
+      if (!hasDuplicates(permutation)) permutations.push(permutation);
+    }
+  }
+
+  // Retornamos as permutações
+  return permutations;
+}
+function hasDuplicates(array) {
+  // Criamos um conjunto a partir do array
+  let set = new Set(array);
+
+  // Se o tamanho do conjunto for menor que o do array, então há elementos repetidos no array
+  return set.size < array.length;
+}
+
+ */
