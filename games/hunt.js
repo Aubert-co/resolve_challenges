@@ -56,4 +56,4 @@ function Values (){
 const {daylyValue,generalValue,fund,median,lastDays} = Values()
 
 //const sparks= datasProfit.filter(({profit})=>profit>5000)
-console.log(lastDays(5))
+console.log(lastDays(42))
