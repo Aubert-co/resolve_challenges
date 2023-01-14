@@ -29,10 +29,11 @@ function permutator(inputArr) {
     const ma = new Map()
    const string = inputArr.split('')
     function permute(arr, memo) {
+      
       var cur, memo = memo || [];
   
       for (var i = 0; i < arr.length; i++) {
-        console.log(i,arr)
+        
         cur = arr.splice(i, 1);
         if (arr.length === 0) {
           results.push(memo.concat(cur).join(''));
