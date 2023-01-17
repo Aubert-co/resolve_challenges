@@ -1,4 +1,4 @@
-function countWaysToMakeChange(amount, coinDenominations) {
+/*function countWaysToMakeChange(amount, coinDenominations) {
     // Initialize an array to store the number of ways to make change
     // for each value from 0 to the given amount
     let ways = new Array(amount + 1).fill(0);
@@ -18,4 +18,39 @@ function countWaysToMakeChange(amount, coinDenominations) {
     // Return the number of ways to make change for the given amount
     return ways[amount];
 }
-console.log(countWaysToMakeChange(11,[5,7]))
+console.log(countWaysToMakeChange(11,[5,7]))*/
+
+const bb = (s)=>{
+    const b = s.split('')
+    const v = []
+    const ot = {}
+    const obj = {}
+    for(let i =0;i<b.length;i++){
+        if(b[i].match(/[a-zA-Z]/i)){
+            v.push(b[i])
+        }else{
+            const ss  ={key:i,le:b[i]}
+            obj[i] = b[i]
+        }
+    }
+    const m  =v.reverse()
+
+
+
+
+ /*   const asv = []
+    const ks = Object.keys(obj).length
+    var count = m.length + ks
+    for(let i =0;i<count;i++){
+        if(obj[i]){
+            const value = obj[i]
+            asv[i] = value
+            asv[i+1] = m[i]
+        }else{
+            asv[i] = m[i]
+        }
+    }
+    console.log(asv)*/
+}
+bb('a-b-d-f')
+
